@@ -1,12 +1,35 @@
 import React, { useState } from "react";
 import "./styles.css";
 
+const maskMoneyLimited = (value) => {
+  return value
+    .replace(/\D/g, "")
+    .replace(/(\d{3})(\d)/, "$2,$1")
+    .replace(/(\d{3})(\d)/, "$1,$2")
+    .replace(/(\d{3})(\d)/, "$1,$2")
+    .replace(/(,\d{3})\d+?$/, "$1")
+    .replace(/^/gm, "$ ");
+};
+
+const maskMoneyUnlimited = (value) => {
+  return (
+    value
+      .replace(/\D/g, "")
+      // thousand + cents
+      .replace(/(\d)(\d{2})$/, "$1.$2")
+      .replace(/(?=(\d{3})+(\D))\B/g, ",")
+      .replace(/^/gm, "$ ")
+  );
+  // comma for every 3 characters
+  //.replace(/(?=(\d{3})+(\D))\B/g, ",");
+};
+
 const maskCPF = (value) => {
   return value
     .replace(/\D/g, "")
-    .replace(/(\d{3})(\d)/, "$1,$2")
-    .replace(/(\d{3})(\d)/, "$1,$2")
-    .replace(/(\d{3})(\d{1,2})/, "$1,$2")
+    .replace(/(\d{3})(\d)/, "$1.$2")
+    .replace(/(\d{3})(\d)/, "$1.$2")
+    .replace(/(\d{3})(\d{1,2})/, "$1-$2")
     .replace(/(-\d{2})\d+?$/, "$1");
 };
 
@@ -47,6 +70,8 @@ const maskCEP = (value) => {
 };
 
 const App = () => {
+  const [moneyU, setMoneyU] = useState("");
+  const [moneyL, setMoneyL] = useState("");
   const [cpf, setCPF] = useState("");
   const [phone, setPhone] = useState("");
   const [number, setNumber] = useState("");
@@ -57,6 +82,16 @@ const App = () => {
   return (
     <div className="App">
       <h1>React Input Mask</h1>
+      <input
+        value={moneyL}
+        onChange={(e) => setMoneyL(maskMoneyLimited(e.target.value))}
+        placeholder="Money Limited - formato: $ 000,000"
+      />
+      <input
+        value={moneyU}
+        onChange={(e) => setMoneyU(maskMoneyUnlimited(e.target.value))}
+        placeholder="Money Unlimited - formato: $ 000,000.00"
+      />
       <input
         value={cpf}
         onChange={(e) => setCPF(maskCPF(e.target.value))}
