@@ -1,4 +1,4 @@
 # InputMasking
 Created with CodeSandbox
 
-https://codesandbox.io/p/github/tiagoanatar/InputMasking/draft/agitated-clarke?file=%2Fsrc%2FApp.js&selection=%5B%7B%22endColumn%22%3A37%2C%22endLineNumber%22%3A8%2C%22startColumn%22%3A37%2C%22startLineNumber%22%3A8%7D%5D&workspace=%257B%2522activeFileId%2522%253A%2522cl8zi3y340008ltgkbd4l7e1y%2522%252C%2522openFiles%2522%253A%255B%2522%252FREADME.md%2522%252C%2522%252Fsrc%252FApp.js%2522%255D%252C%2522sidebarPanel%2522%253A%2522EXPLORER%2522%252C%2522gitSidebarPanel%2522%253A%2522COMMIT%2522%252C%2522sidekickItems%2522%253A%255B%257B%2522type%2522%253A%2522PREVIEW%2522%252C%2522taskId%2522%253A%2522start%2522%252C%2522port%2522%253A3000%252C%2522key%2522%253A%2522cl8zi4sek009e356hn9tj1wi1%2522%252C%2522isMinimized%2522%253Afalse%257D%252C%257B%2522type%2522%253A%2522TASK_LOG%2522%252C%2522taskId%2522%253A%2522start%2522%252C%2522key%2522%253A%2522cl8zi4p6t005k356h4imduchd%2522%252C%2522isMinimized%2522%253Afalse%257D%255D%257D
+https://codesandbox.io/p/github/tiagoanatar/InputMasking/draft/agitated-clarke?file=%2Fsrc%2FApp.js
