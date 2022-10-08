@@ -1,0 +1,21 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+
+input {
+  width: 90%;
+  background: #fff;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+input:active,
+input:focus {
+  outline: 0;
+}
